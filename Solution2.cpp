@@ -17,9 +17,7 @@ public:
         rotated_nums.push_back(nums[(a + i) % len]);
       }
 
-      for (int i = 0; i < len; i++) {
-        nums[i] = rotated_nums[i];
-      }
+      std::copy(rotated_nums.begin(), rotated_nums.end(), nums.begin());
     }
   }
 
